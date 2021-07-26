@@ -1,0 +1,11 @@
+version: "3.0"
+services:
+  siuccweb07:
+    image: francon/phpora:2
+    ports: 
+        - "82:80"
+    volumes:
+        - ./:/var/www/html
+        - ./serverconfig/nginx.conf:/etc/nginx/nginx.conf
+        - ./serverconfig/entrypoint.sh:/etc/entrypoint.sh
+    command: echo "hola mundo"
